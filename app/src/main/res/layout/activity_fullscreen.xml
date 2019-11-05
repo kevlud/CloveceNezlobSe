@@ -10,6 +10,7 @@
     <!-- The primary full-screen view. This can be replaced with whatever view
          is needed to present your content, e.g. VideoView, SurfaceView,
          TextureView, etc. -->
+
     <TextView
             android:id="@+id/fullscreen_content"
             android:layout_width="match_parent"
@@ -23,11 +24,11 @@
 
     <!-- This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows. -->
-    <ImageView
+
+    <com.matejnevlud.clovecenezlobse.CanvasView
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_board" />
+            android:layout_height="wrap_content" />
 
     <FrameLayout
             android:layout_width="match_parent"
