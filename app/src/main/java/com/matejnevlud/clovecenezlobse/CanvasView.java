@@ -13,7 +13,9 @@ import android.util.SparseArray;
 import android.view.MotionEvent;
 import android.view.View;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Random;
 
 public class CanvasView extends View {
@@ -27,6 +29,8 @@ public class CanvasView extends View {
     private Paint myPaint;
     private Paint backgroundPaint;
 
+    private ArrayList<Paint> positions = new ArrayList<Paint>();
+
     public CanvasView(Context context, AttributeSet attrs) {
         super(context, attrs);
 
@@ -36,7 +40,14 @@ public class CanvasView extends View {
         myPaint = new Paint();
         myPaint.setColor(Color.WHITE);
         myPaint.setAntiAlias(true);
+
+        Paint position = new Paint();
+        position.setColor(Color.WHITE);
+        position.setStrokeWidth(4);
+
+        positions.add(position);
     }
+
 
     public boolean onTouchEvent(MotionEvent event) {
         int action = event.getAction();
@@ -57,11 +68,16 @@ public class CanvasView extends View {
         return (true);
     }
 
+
     public void draw(Canvas canvas) {
-        int width = canvas.getWidth();
-        int height = canvas.getHeight();
+        super.draw(canvas);
+
+        int width = getWidth();
+        int height = getHeight();
         canvas.drawRect(0, 0, width, height, backgroundPaint);
         canvas.drawCircle(x, y, RADIUS, myPaint);
+
+        canvas.drawCircle(50,50, 100, positions.get(0));
         invalidate();
     }
 }
