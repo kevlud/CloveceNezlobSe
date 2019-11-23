@@ -6,11 +6,16 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="SOCKET" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a820051e-4b2b-4044-a72e-1d38cec52885" name="Default Changelist" comment="" />
+    <list default="true" id="a820051e-4b2b-4044-a72e-1d38cec52885" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/matejnevlud/clovecenezlobse/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/matejnevlud/clovecenezlobse/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,8 +48,8 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
           <provider editor-type-id="android-designer2" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" column="47" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
+            <state relative-caret-position="437">
+              <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -52,17 +57,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/matejnevlud/clovecenezlobse/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="11" column="45" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="45" />
+            <state relative-caret-position="4416">
+              <caret line="213" column="51" selection-start-line="213" selection-start-column="51" selection-end-line="213" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/matejnevlud/clovecenezlobse/BoardView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="13455">
+              <caret line="611" column="21" selection-start-line="611" selection-start-column="21" selection-end-line="611" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/matejnevlud/clovecenezlobse/CanvasView.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/matejnevlud/clovecenezlobse/PathToWin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="31" column="62" selection-start-line="31" selection-start-column="62" selection-end-line="31" selection-end-column="62" />
+            <state relative-caret-position="260">
+              <caret line="441" column="34" selection-start-line="441" selection-start-column="34" selection-end-line="441" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -91,10 +105,12 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/matejnevlud/clovecenezlobse/FullscreenActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/matejnevlud/clovecenezlobse/CanvasView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/matejnevlud/clovecenezlobse/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/matejnevlud/clovecenezlobse/BoardView.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="width" value="1920" />
     <option name="height" value="1200" />
   </component>
@@ -104,19 +120,24 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DEBUGGABLE_DEVICE" value="emulator-5554" />
+    <property name="DEBUGGABLE_PROCESS" value="com.matejnevlud.clovecenezlobse" />
+    <property name="DEBUGGER_ID" value="Auto" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="memory.settings" />
+    <property name="sync.plugin.last.upgrade.timestamp" value="1573546977504" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.packageName">
@@ -246,11 +267,19 @@
       <option name="project" value="LOCAL" />
       <updated>1572952089881</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added main game logic&#10;- updated multiplayer capabilities&#10;- added tossing dice by shaking phone">
+      <created>1573508524253</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1573508524253</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2087327" />
@@ -264,11 +293,11 @@
       <window_info anchor="bottom" id="Run" order="0" weight="0.32944345" />
       <window_info anchor="bottom" id="Logcat" order="1" weight="0.32944345" />
       <window_info anchor="bottom" id="TODO" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.47755834" />
       <window_info anchor="bottom" id="Terminal" order="4" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="6" />
-      <window_info active="true" anchor="bottom" id="Build" order="7" visible="true" weight="0.40664274" />
+      <window_info anchor="bottom" id="Build" order="7" visible="true" weight="0.24506284" />
       <window_info anchor="bottom" id="Android Profiler" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
@@ -276,6 +305,7 @@
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="right" id="Preview" order="5" weight="0.32960597" />
+      <window_info anchor="right" id="Assistant" order="6" weight="0.32960597" />
     </layout>
   </component>
   <component name="VcsManagerConfiguration">
@@ -285,7 +315,26 @@
     <MESSAGE value="board image upload" />
     <MESSAGE value="canvasView creation" />
     <MESSAGE value="draw Circle added" />
-    <option name="LAST_COMMIT_MESSAGE" value="draw Circle added" />
+    <MESSAGE value="Added main game logic&#10;- updated multiplayer capabilities&#10;- added tossing dice by shaking phone" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added main game logic&#10;- updated multiplayer capabilities&#10;- added tossing dice by shaking phone" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/matejnevlud/clovecenezlobse/BoardView.java</url>
+          <line>598</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/matejnevlud/clovecenezlobse/BoardView.java</url>
+          <line>617</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/board.svg" />
@@ -304,6 +353,7 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/matejnevlud/clovecenezlobse/CanvasView.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/matejnevlud/clovecenezlobse/FullscreenActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3450">
@@ -314,22 +364,29 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="47" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
+        <state relative-caret-position="437">
+          <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/matejnevlud/clovecenezlobse/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="11" column="45" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="45" />
+        <state relative-caret-position="4416">
+          <caret line="213" column="51" selection-start-line="213" selection-start-column="51" selection-end-line="213" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/matejnevlud/clovecenezlobse/CanvasView.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/matejnevlud/clovecenezlobse/BoardView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="31" column="62" selection-start-line="31" selection-start-column="62" selection-end-line="31" selection-end-column="62" />
+        <state relative-caret-position="13455">
+          <caret line="611" column="21" selection-start-line="611" selection-start-column="21" selection-end-line="611" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/matejnevlud/clovecenezlobse/PathToWin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="441" column="34" selection-start-line="441" selection-start-column="34" selection-end-line="441" selection-end-column="34" />
         </state>
       </provider>
     </entry>

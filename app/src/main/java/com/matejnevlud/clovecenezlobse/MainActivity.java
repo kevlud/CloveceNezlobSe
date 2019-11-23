@@ -2,9 +2,14 @@ package com.matejnevlud.clovecenezlobse;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.hardware.SensorManager;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
+import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.github.nkzawa.emitter.Emitter;
@@ -22,6 +27,8 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity implements ShakeDetector.Listener, OnBoardChangedListener {
 
+    MediaPlayer player;
+    ProgressDialog progressBar;
     BoardView boardView;
 
     TextView myNameTextView;
@@ -67,20 +74,32 @@ public class MainActivity extends AppCompatActivity implements ShakeDetector.Lis
         this.mSocket.on("other moved", onOtherMoved);
         this.mSocket.connect();
 
+
+        progressBar = new ProgressDialog(this);
+        progressBar.setTitle("Please wait");
+        progressBar.setMessage("Waiting for other players...");
+        progressBar.setCancelable(false); // disable dismiss by tapping outside of the dialog
+        progressBar.show();
+
     }
+
+    public void onRestartButtonClicked(View view) {
+        this.mSocket.emit("initialize game");
+        boardView.restartBoard();
+    }
+
 
     private void onMyTurn() {
         myNameTextView.setText("Your turn, " + playerName);
         isMyTurn = true;
         canTossDice = true;
+        diceNumbers = new ArrayList<>();
         boardView.startDrawingAnimatedDice();
-
-
-        ///// SMAZAT V OSTRE
-        this.generateRandomDiceNumber();
+        myNameTextView.setText("You can throw the dice.");
     }
 
-    private void OnOtherMoved(String jsonResponse) {
+    private void onOtherMoved(String jsonResponse) {
+        myNameTextView.setText("Other player moved.");
         boardView.parseJSONFromServer(jsonResponse);
     }
 
@@ -95,57 +114,93 @@ public class MainActivity extends AppCompatActivity implements ShakeDetector.Lis
         Random rn = new Random();
         lastDiceNumber = rn.nextInt(6) + 1;
         diceNumbers.add(lastDiceNumber);
-        Log.d("GAME", "Did toss number " + lastDiceNumber);
+        Log.d("GAME", "Did throw number " + lastDiceNumber);
+        myNameTextView.setText("You threw " + lastDiceNumber);
+
         canTossDice = false;
         boardView.stopDrawingAnimatedDice(lastDiceNumber);
 
-        if (boardView.isMyPieceOutOfHolder(boardView.myColoredFigure)) {
-            this.canMoveFigure = true;
-            boardView.canMoveFigure();
-        } else if (!boardView.isMyPieceOutOfHolder(boardView.myColoredFigure) && lastDiceNumber == 6) {
+        if (boardView.isMyPieceOutOfHolder()) {
             this.canMoveFigure = true;
             boardView.canMoveFigure();
 
-        } else if (diceNumbers.size() >= 3) {
-            this.emitMyTurnEnded();
-            this.diceNumbers = new ArrayList<>();
+            // If I have figures on board and i threw number 6
+        } else if (!boardView.isMyPieceOutOfHolder() && lastDiceNumber == 6) {
+            this.canMoveFigure = true;
+            boardView.canMoveFigure();
+
+            // If all my figures are in holders and I didnt throw dice 3 times yet
+        } else if (!boardView.isMyPieceOutOfHolder() && lastDiceNumber != 6 && diceNumbers.size() < 3) {
+            final Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    canTossDice = true;
+                    boardView.startDrawingAnimatedDice();
+                    myNameTextView.setText("You can throw the dice.");
+                }
+            }, 2000);
         } else {
-            canTossDice = true;
-            boardView.startDrawingAnimatedDice();
-
-            ///// SMAZAT V OSTRE
-            this.generateRandomDiceNumber();
+            emitMyTurnEnded();
         }
-
-
     }
 
+
+    // BOARD VIEW LISTENER
     @Override
     public void onBoardFigureMoved() {
         this.emitMyFigureMoved();
     }
 
+    @Override
+    public void onDiceClicked() {
+        if (!canTossDice) return;
+        this.generateRandomDiceNumber();
+    }
 
     private void emitMyFigureMoved() {
         Log.d("SOCKET EMIT", "FIGURE MOVED");
         mSocket.emit("figure moved", boardView.exportToJSONMovedFigures());
-        this.emitMyTurnEnded();
+
+
+        if (lastDiceNumber == 6) {
+            canTossDice = true;
+            boardView.startDrawingAnimatedDice();
+            myNameTextView.setText("You can throw the dice.");
+        } else {
+            this.emitMyTurnEnded();
+        }
     }
 
     private void emitMyTurnEnded() {
+        myNameTextView.setText("Your move ended.");
         Log.d("SOCKET EMIT", "MOVE ENDED");
         mSocket.emit("move ended");
-
+        isMyTurn = false;
     }
 
 
+    // SOCKET IO LISTENER
     private Emitter.Listener onStartGame = new Emitter.Listener() {
         @Override
         public void call(final Object... args) {
             //JSONObject data = (JSONObject) args[0];
 
-            Log.d("SOCKET START GAME", (String) args[0]);
-            boardView.setMyPlayingColor((String) args[0]);
+            final String myColor = (String) args[0];
+
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    ((TextView) findViewById(R.id.myColor)).setText(myColor);
+                }
+            });
+
+
+            Log.d("SOCKET START GAME", myColor);
+            boardView.setMyPlayingColor(myColor);
+            boardView.restartBoard();
+
+            progressBar.dismiss();
         }
     };
 
@@ -155,7 +210,7 @@ public class MainActivity extends AppCompatActivity implements ShakeDetector.Lis
                 public void run() {
                     //JSONObject data = (JSONObject) args[0];
                     playerName = (String) args[0];
-                    myNameTextView.setText(playerName);
+                    myNameTextView.setText("Starting new game");
 
                     Log.d("SOCKET MY NAME", (String) args[0]);
                 }
@@ -180,7 +235,7 @@ public class MainActivity extends AppCompatActivity implements ShakeDetector.Lis
             MainActivity.this.runOnUiThread(new Runnable() {
                 public void run() {
                     Log.d("SOCKET", "OTHER MOVED");
-                    //onOtherMoved();
+                    onOtherMoved((String) args[0]);
                 }
             });
         }

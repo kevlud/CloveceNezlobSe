@@ -5,17 +5,34 @@
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#E5D3A6">
+        android:background="@drawable/gradient">
 
     <TextView
             android:id="@+id/myName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
             android:text="Player Name"
+            android:textColor="#FFFFFF"
+            android:textSize="24dp"
             app:layout_constraintBottom_toTopOf="@+id/canvasView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.304" />
+
+    <TextView
+            android:id="@+id/myColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="My Color"
+            android:textColor="#FFFFFF"
+            android:textSize="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/canvasView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/myName" />
 
     <com.matejnevlud.clovecenezlobse.BoardView
             android:id="@+id/canvasView"
@@ -26,5 +43,20 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+            android:id="@+id/restartGame"
+            android:layout_width="140dp"
+            android:layout_height="55dp"
+            android:background="@drawable/round_button"
+            android:fontFamily="sans-serif-light"
+            android:onClick="onRestartButtonClicked"
+            android:text="Restart"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/canvasView" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
