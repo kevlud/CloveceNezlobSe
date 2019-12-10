@@ -11,10 +11,8 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a820051e-4b2b-4044-a72e-1d38cec52885" name="Default Changelist" comment="">
+    <list default="true" id="a820051e-4b2b-4044-a72e-1d38cec52885" name="Default Changelist" comment="Added music &amp; updated design">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/matejnevlud/clovecenezlobse/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/matejnevlud/clovecenezlobse/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,29 +34,38 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/matejnevlud/clovecenezlobse/FullscreenActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3450">
-              <caret line="163" column="25" selection-start-line="163" selection-start-column="25" selection-end-line="163" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-          <provider editor-type-id="android-designer2" />
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="437">
               <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
             </state>
           </provider>
+          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/matejnevlud/clovecenezlobse/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4416">
-              <caret line="213" column="51" selection-start-line="213" selection-start-column="51" selection-end-line="213" selection-end-column="51" />
+            <state relative-caret-position="236">
+              <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
+              <folding>
+                <element signature="initializer##0;class#MainActivity#0" />
+                <element signature="method#onCreate#0;class#MainActivity#0" />
+                <element signature="method#onRestartButtonClicked#0;class#MainActivity#0" />
+                <element signature="method#onMyTurn#0;class#MainActivity#0" />
+                <element signature="method#onOtherMoved#0;class#MainActivity#0" />
+                <element signature="method#hearShake#0;class#MainActivity#0" />
+                <element signature="method#generateRandomDiceNumber#0;class#MainActivity#0" />
+                <element signature="e#3687#3840#1" />
+                <element signature="e#3908#4081#1" />
+                <element signature="e#4175#4557#1" />
+                <element signature="e#4563#4605#1" />
+                <element signature="method#onDiceClicked#0;class#MainActivity#0" />
+                <element signature="method#emitMyFigureMoved#0;class#MainActivity#0" />
+                <element signature="e#5061#5217#1" />
+                <element signature="e#5223#5270#1" />
+                <element signature="method#emitMyTurnEnded#0;class#MainActivity#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -66,17 +73,62 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/matejnevlud/clovecenezlobse/BoardView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="13455">
-              <caret line="611" column="21" selection-start-line="611" selection-start-column="21" selection-end-line="611" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/matejnevlud/clovecenezlobse/PathToWin.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="441" column="34" selection-start-line="441" selection-start-column="34" selection-end-line="441" selection-end-column="34" />
+            <state relative-caret-position="3335">
+              <caret line="425" column="19" selection-start-line="425" selection-start-column="19" selection-end-line="425" selection-end-column="19" />
+              <folding>
+                <element signature="class#BP#0" />
+                <element signature="e#2086#2591#0" />
+                <element signature="e#2597#2810#0" />
+                <element signature="e#2816#2928#0" />
+                <element signature="e#2934#3971#0" />
+                <element signature="e#3008#3913#0" />
+                <element signature="e#3978#7165#0" />
+                <element signature="e#7172#7278#0" />
+                <element signature="e#7285#9714#0" />
+                <element signature="e#7501#7535#0" />
+                <element signature="e#7707#9617#1" />
+                <element signature="e#7750#9607#1" />
+                <element signature="e#7799#9593#0" />
+                <element signature="e#9720#10811#0" />
+                <element signature="e#9908#10803#1" />
+                <element signature="e#9951#10793#1" />
+                <element signature="e#10006#10779#0" />
+                <element signature="e#10818#11374#0" />
+                <element signature="e#11028#11071#0" />
+                <element signature="e#11727#11907#0" />
+                <element signature="e#11914#12370#0" />
+                <element signature="e#12027#12341#1" />
+                <element signature="e#12070#12331#1" />
+                <element signature="e#12135#12317#1" />
+                <element signature="e#12376#12727#0" />
+                <element signature="e#12450#12698#1" />
+                <element signature="e#12493#12688#1" />
+                <element signature="e#12558#12674#1" />
+                <element signature="e#12962#13193#1" />
+                <element signature="e#15785#15955#1" />
+                <element signature="e#16123#16612#1" />
+                <element signature="e#16365#16550#1" />
+                <element signature="e#16556#16601#1" />
+                <element signature="e#16844#19847#1" />
+                <element signature="e#17086#19786#1" />
+                <element signature="e#17191#19602#0" />
+                <element signature="e#19792#19837#1" />
+                <element signature="e#19882#20178#0" />
+                <element signature="e#20042#20142#1" />
+                <element signature="e#20185#20927#0" />
+                <element signature="e#20270#20919#0" />
+                <element signature="e#20934#22739#0" />
+                <element signature="e#21187#22637#1" />
+                <element signature="e#21230#22627#1" />
+                <element signature="e#21316#22613#0" />
+                <element signature="e#22745#23976#0" />
+                <element signature="e#23125#23946#1" />
+                <element signature="e#23246#23935#1" />
+                <element signature="e#23293#23921#1" />
+                <element signature="e#23351#23903#1" />
+                <element signature="class#FigureMovement#0" />
+                <element signature="method#FigureMovement#0;class#FigureMovement#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -110,7 +162,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1920" />
     <option name="height" value="1200" />
   </component>
@@ -120,10 +172,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -274,7 +326,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573508524253</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added music &amp; updated design">
+      <created>1574521958257</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1574521958257</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -282,7 +341,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2087327" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.2087327" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -310,13 +369,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Initial project files" />
     <MESSAGE value="Initial android app structure" />
     <MESSAGE value="board image upload" />
     <MESSAGE value="canvasView creation" />
     <MESSAGE value="draw Circle added" />
     <MESSAGE value="Added main game logic&#10;- updated multiplayer capabilities&#10;- added tossing dice by shaking phone" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added main game logic&#10;- updated multiplayer capabilities&#10;- added tossing dice by shaking phone" />
+    <MESSAGE value="Added music &amp; updated design" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added music &amp; updated design" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -338,14 +399,7 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/board.svg" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_fullscreen.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="30" column="48" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_fullscreen.xml" />
     <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-29/android/view/View.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
@@ -354,39 +408,116 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/matejnevlud/clovecenezlobse/CanvasView.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/matejnevlud/clovecenezlobse/FullscreenActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/matejnevlud/clovecenezlobse/FullscreenActivity.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/matejnevlud/clovecenezlobse/PathToWin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3450">
-          <caret line="163" column="25" selection-start-line="163" selection-start-column="25" selection-end-line="163" selection-end-column="26" />
+        <state relative-caret-position="168">
+          <caret line="437" lean-forward="true" selection-start-line="437" selection-end-line="437" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/matejnevlud/clovecenezlobse/MenuActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="30" column="42" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
+          <folding>
+            <element signature="method#onCreate#0;class#MenuActivity#0" />
+            <element signature="method#onResume#0;class#MenuActivity#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
           <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/matejnevlud/clovecenezlobse/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4416">
-          <caret line="213" column="51" selection-start-line="213" selection-start-column="51" selection-end-line="213" selection-end-column="51" />
-        </state>
-      </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/matejnevlud/clovecenezlobse/BoardView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13455">
-          <caret line="611" column="21" selection-start-line="611" selection-start-column="21" selection-end-line="611" selection-end-column="21" />
+        <state relative-caret-position="3335">
+          <caret line="425" column="19" selection-start-line="425" selection-start-column="19" selection-end-line="425" selection-end-column="19" />
+          <folding>
+            <element signature="class#BP#0" />
+            <element signature="e#2086#2591#0" />
+            <element signature="e#2597#2810#0" />
+            <element signature="e#2816#2928#0" />
+            <element signature="e#2934#3971#0" />
+            <element signature="e#3008#3913#0" />
+            <element signature="e#3978#7165#0" />
+            <element signature="e#7172#7278#0" />
+            <element signature="e#7285#9714#0" />
+            <element signature="e#7501#7535#0" />
+            <element signature="e#7707#9617#1" />
+            <element signature="e#7750#9607#1" />
+            <element signature="e#7799#9593#0" />
+            <element signature="e#9720#10811#0" />
+            <element signature="e#9908#10803#1" />
+            <element signature="e#9951#10793#1" />
+            <element signature="e#10006#10779#0" />
+            <element signature="e#10818#11374#0" />
+            <element signature="e#11028#11071#0" />
+            <element signature="e#11727#11907#0" />
+            <element signature="e#11914#12370#0" />
+            <element signature="e#12027#12341#1" />
+            <element signature="e#12070#12331#1" />
+            <element signature="e#12135#12317#1" />
+            <element signature="e#12376#12727#0" />
+            <element signature="e#12450#12698#1" />
+            <element signature="e#12493#12688#1" />
+            <element signature="e#12558#12674#1" />
+            <element signature="e#12962#13193#1" />
+            <element signature="e#15785#15955#1" />
+            <element signature="e#16123#16612#1" />
+            <element signature="e#16365#16550#1" />
+            <element signature="e#16556#16601#1" />
+            <element signature="e#16844#19847#1" />
+            <element signature="e#17086#19786#1" />
+            <element signature="e#17191#19602#0" />
+            <element signature="e#19792#19837#1" />
+            <element signature="e#19882#20178#0" />
+            <element signature="e#20042#20142#1" />
+            <element signature="e#20185#20927#0" />
+            <element signature="e#20270#20919#0" />
+            <element signature="e#20934#22739#0" />
+            <element signature="e#21187#22637#1" />
+            <element signature="e#21230#22627#1" />
+            <element signature="e#21316#22613#0" />
+            <element signature="e#22745#23976#0" />
+            <element signature="e#23125#23946#1" />
+            <element signature="e#23246#23935#1" />
+            <element signature="e#23293#23921#1" />
+            <element signature="e#23351#23903#1" />
+            <element signature="class#FigureMovement#0" />
+            <element signature="method#FigureMovement#0;class#FigureMovement#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/matejnevlud/clovecenezlobse/PathToWin.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/matejnevlud/clovecenezlobse/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="441" column="34" selection-start-line="441" selection-start-column="34" selection-end-line="441" selection-end-column="34" />
+        <state relative-caret-position="236">
+          <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
+          <folding>
+            <element signature="initializer##0;class#MainActivity#0" />
+            <element signature="method#onCreate#0;class#MainActivity#0" />
+            <element signature="method#onRestartButtonClicked#0;class#MainActivity#0" />
+            <element signature="method#onMyTurn#0;class#MainActivity#0" />
+            <element signature="method#onOtherMoved#0;class#MainActivity#0" />
+            <element signature="method#hearShake#0;class#MainActivity#0" />
+            <element signature="method#generateRandomDiceNumber#0;class#MainActivity#0" />
+            <element signature="e#3687#3840#1" />
+            <element signature="e#3908#4081#1" />
+            <element signature="e#4175#4557#1" />
+            <element signature="e#4563#4605#1" />
+            <element signature="method#onDiceClicked#0;class#MainActivity#0" />
+            <element signature="method#emitMyFigureMoved#0;class#MainActivity#0" />
+            <element signature="e#5061#5217#1" />
+            <element signature="e#5223#5270#1" />
+            <element signature="method#emitMyTurnEnded#0;class#MainActivity#0" />
+          </folding>
         </state>
       </provider>
     </entry>
